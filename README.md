@@ -93,7 +93,9 @@ Files
   - README
  
   
-  Required libraries: OpenLCB_Single_Thread this needs to be installed before this sketch will compile. It is available via the Arduino Library manager.
+  ## Required libraries: 
+  
+  OpenLCB_Single_Thread this needs to be installed before this sketch will compile. It is available via the Arduino Library manager.
 
 
 
