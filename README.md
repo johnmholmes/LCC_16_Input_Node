@@ -1,5 +1,7 @@
 # LCC_16_Input_Node
 
+mimor version changes should not effect saved backup and restore .txt files created from JMRI. However any major changes with extra events will break the previous version Backup file.
+
   - OpenLCB 16-Input Node – ESP32 Version
   - Version: 1.0
   - Date: June 2026
