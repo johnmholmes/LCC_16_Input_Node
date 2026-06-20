@@ -1,7 +1,8 @@
-/* 
-This is my test version for demonstration CAN Bus use only by John Holmes
+/* 16input_v1.0.1
+
+This is my test version for demonstration of a CAN Bus node only by John Holmes
   - Pins 15 RX and 2 TX for the transceiver module
-  - Pins 4,16,17,5,18,19,21,22,13,12,14,27,26,25,33,32  are used for input
+  - Pins D4,D16,D17,D5,D18,D19,D21,D22,D13,D12,D14,D27,D26,D25,D33,D32  are used for input
 */
 
 /*
@@ -16,19 +17,19 @@ This is my test version for demonstration CAN Bus use only by John Holmes
  - 16 input/output channels:
      - type: 0=None, 
              1=Input, 2=Input inverted, 
-             3=Input with pull-up, 4=Input with pull-up inverted, 
-             5=Input toggle, 6=Toggle with pull-up
+             3=Input with pull-up, 
+             4=Input with pull-up inverted, 
+             5=Input toggle, 
+             6=Toggle with pull-up
      - Inputs:
        - Events are produced
        - On-delay: delay before on-event is sent
        - Off-delay: the period before the off-event is sent
-
- THis code should be easily extended to more than 2 servos and 8 io.
 ==============================================================
 */
 
 #include "Config.h"   // Contains configuration, see "Config.h"
-#include "Boards.h"   // Contains Board defintions, see "BBoards.h"
+#include "Boards.h"   // Contains Board defintions, see "Boards.h"
 
 // User defs
 #define OLCB_NO_BLUE_GOLD
@@ -46,10 +47,25 @@ const char configDefInfo[] PROGMEM =
   CDIheader R"(
     <name>Application Configuration</name>
     <group replication=')" N(NUM_IO) R"('>
-        <name>Inputs </name>
-        <repname>Input </repname>
+        <name>Inputs as they appear on the ESP32 Devkit 1 sensor shield</name>
+        <repname>Input D4 </repname>
+        <repname>Input D16 </repname>
+        <repname>Input D17 </repname>
+        <repname>Input D5 </repname>
+        <repname>Input D18 </repname>
+        <repname>Input D19 </repname>
+        <repname>Input D21 </repname>
+        <repname>Input D22 </repname>
+        <repname>Input D13 </repname>
+        <repname>Input D12 </repname>
+        <repname>Input D14 </repname>
+        <repname>Input D27 </repname>
+        <repname>Input D26 </repname>
+        <repname>Input D25 </repname>
+        <repname>Input D33 </repname>
+        <repname>Input D32 </repname>
         <string size='24'><name>Description</name></string>
-        <int size='1'><name> Choose an input type</name>
+        <int size='1'><name> Choose an input type from the drop down list</name>
             <name>Channel Type type</name>
             <map>
                 <relation><property>0</property><value>None</value></relation> 
@@ -97,9 +113,6 @@ const char configDefInfo[] PROGMEM =
       // items below will be included in the EEPROM, but are not part of the CDI
     } MemStruct;                 // type definition
 
- 
-
-
 extern "C" {
     // ===== eventid Table =====
     //  Array of the offsets to every eventID in MemStruct/EEPROM/mem, and P/C flags
@@ -120,13 +133,10 @@ uint8_t protocolIdentValue[6] = {   //0xD7,0x58,0x00,0,0,0};
         0, 0, 0, 0                                                                                           // remaining 4 bytes
     };
 
-
-
 uint8_t iopin[] = { IOPINS };
 bool iostate[NUM_IO] = {0};  // state of the iopin
 bool logstate[NUM_IO] = {0}; // logic state for toggle
 unsigned long next[NUM_IO] = {0};
-
 
 // This is called to initialize the EEPROM to Factory Reset
 void userInitAll()
@@ -225,7 +235,6 @@ void userHardReset() {}
 NodeID nodeid(NODE_ADDRESS);  // this node's nodeid, do not move
 #include "OpenLCBMid.h"    // Essential, do not move or delete
 
-
 // Callback from a Configuration write
 // Use this to detect changes in the ndde's configuration
 // This may be useful to take immediate action on a change.
@@ -260,7 +269,6 @@ void setupIOPins() {
     dP(iopin[i]); dP(":"); dP(type); dP(", ");
   }
 }
-
 
 // ==== Setup does initial configuration ======================
 void setup()

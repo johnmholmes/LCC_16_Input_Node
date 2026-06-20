@@ -1,13 +1,16 @@
 # LCC_16_Input_Node
 
+mimor version changes should not effect saved backup and restore .txt files created from JMRI. However any major changes with extra events will break the previous version Backup file.
+
   - OpenLCB 16-Input Node – ESP32 Version
   - Version: 1.0
   - Date: June 2026
-  - Author: John Holmes (based on David P Harris template)
+  - Author: John Holmes (based on David P Harris maintaind example.)
 
 ## Overview
 
 This node provides 16 configurable digital inputs using an ESP32. Each input can generate standard OpenLCB On-Events and Off-Events, supporting various input types including toggle mode with delays.
+
 Features
 
   - 16 independent input channels
