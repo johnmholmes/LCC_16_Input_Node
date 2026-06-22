@@ -79,11 +79,11 @@ const char configDefInfo[] PROGMEM =
             </map>
         </int>
         <int size='1'>
-            <name>On-delay 1-255 = 100ms-25.5s, 0=steady-state</name>
-            <hints><slider tickSpacing='50' immediate='yes' showValue='yes'> </slider></hints>
+            <name>On-delay 0=steady-state, 1-255 = From 100ms to 25.5 seconds </name>
+            <hints><slider tickSpacing='85' immediate='yes' showValue='yes'> </slider></hints>
         </int>
         <int size='1'>
-            <name>Off-delay 1-255 = 100ms-25.5s, 0=No repeat</name>
+            <name>Off-delay  0=No repeat, 1-255 = from 100ms to 25.5 seconds,</name>
             <hints><slider tickSpacing='50' immediate='yes' showValue='yes'> </slider></hints>
         </int>
         <eventid><name>On-Event</name></eventid>
