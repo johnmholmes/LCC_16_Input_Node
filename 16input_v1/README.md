@@ -1,6 +1,6 @@
 **Disclaimer and Limitation of Liability**
 
-This sketch (software) has been developed specifically for the **M5Stack Atom Lite** and the **M5Stack MiniCan** CAN transceiver module. It has only been tested on the author’s personal model railway layout.
+This sketch (software) has been developed specifically for the **ESP32 Devkit 1** and the **SN65VHD230* CAN transceiver module. It has only been tested on the author’s personal model railway layout.
 
 **The sketch is provided “AS IS” and “AS AVAILABLE”**, without any warranties or guarantees of any kind. The author explicitly disclaims all warranties, whether express, implied, or statutory, including but not limited to any warranties of merchantability, fitness for a particular purpose, accuracy, reliability, or non-infringement.
 
