@@ -6,7 +6,7 @@
 #define RESET_TO_FACTORY_DEFAULTS 1
 
 // To set a new nodeid edit the next line
-#define NODE_ADDRESS  5,1,1,1,0x8E,0x03  // must be unique from an address space owned by you or DIY
+#define NODE_ADDRESS  0x05,0x01,0x01,0x01,0x8E,0x03 // must be unique from an address space owned by you or DIY
 
 // Choose a board, uncomment one line, see boards.h
 #define ESP32_BOARD
