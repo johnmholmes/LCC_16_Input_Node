@@ -86,8 +86,8 @@ const char configDefInfo[] PROGMEM =
             <name>Off-delay  0=No repeat, 1-255 = from 100ms to 25.5 seconds,</name>
             <hints><slider tickSpacing='50' immediate='yes' showValue='yes'> </slider></hints>
         </int>
-        <eventid><name>On-Event</name></eventid>
-        <eventid><name>Off-Event</name></eventid>
+        <eventid><name>HIGH State 3.3 volts - Event</name></eventid>
+        <eventid><name>LOW State 0 Volts - Event</name></eventid>
     </group>
     )" CDIfooter;
 // ===== Enter User definitions above =====
