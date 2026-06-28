@@ -122,7 +122,7 @@ extern "C" {
     
     // SNIP Short node description for use by the Simple Node Information Protocol
     // See: http://openlcb.com/wp-content/uploads/2016/02/S-9.7.4.3-SimpleNodeInformation-2016-02-06.pdf
-    extern const char SNII_const_data[] PROGMEM = "\001" MANU "\000" MODEL "\000" HWVERSION "\000" OlcbCommonVersion ; // last zero in double-quote
+    extern const char SNII_const_data[] PROGMEM = "\001" MANU "\000" MODEL "\000" HWVERSION "\000" SWVERSION " " OlcbCommonVersion;
 } // end extern "C"
 
 // PIP Protocol Identification Protocol uses a bit-field to indicate which protocols this node supports
