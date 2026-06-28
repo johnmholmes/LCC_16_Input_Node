@@ -26,8 +26,8 @@
 // Board definitions
 #define MANU "OpenLCB"           // The manufacturer of node
 #define MODEL BOARD "16 input"  // The model of the board
-#define HWVERSION "0.1"          // Hardware version
-#define SWVERSION "0.1"          // Software version
+#define HWVERSION "ESP Basic"          // Hardware version
+#define SWVERSION "1.0.1"          // Software version
 
 #ifdef USEGCSERIAL
   #include "GCSerial.h"
