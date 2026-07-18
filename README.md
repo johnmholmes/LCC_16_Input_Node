@@ -34,14 +34,15 @@ This node provides 16 configurable digital inputs using an ESP32. Each input can
 Features
 
   - 16 independent input channels
-  - 6 input types per channel:
+  - 7 input types per channel:
+
   - None
-  - Input (active high)
-  - Input Inverted
-  - Input with Pull-up
-  - Input with Pull-up Inverted
-  - Toggle
-  - Toggle with Pull-up
+  - 1. Active High (no pull-up)
+  - 2. Active Low  (no pull-up)
+  - 3. Active Low with Pull-up (switch to GND)
+  - 4. Active High with Pull-up
+  - 5. Toggle (falling edge)
+  - 6. Toggle with Pull-up
 
   - Configurable On-delay and Off-delay (0–25.5 seconds)
 
