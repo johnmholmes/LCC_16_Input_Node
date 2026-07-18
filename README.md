@@ -37,12 +37,12 @@ Features
   - 7 input types per channel:
 
   - None
-  - 1. Active High (no pull-up)
-  - 2. Active Low  (no pull-up)
-  - 3. Active Low with Pull-up (switch to GND)
-  - 4. Active High with Pull-up
-  - 5. Toggle (falling edge)
-  - 6. Toggle with Pull-up
+  - 1 Active High (no pull-up)
+  - 2 Active Low  (no pull-up)
+  - 3 Active Low with Pull-up (switch to GND)
+  - 4 Active High with Pull-up
+  - 5 Toggle (falling edge)
+  - 6 Toggle with Pull-up
 
   - Configurable On-delay and Off-delay (0–25.5 seconds)
 
