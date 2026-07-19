@@ -54,11 +54,10 @@ Factory reset support (Not supported at this stage)
 
 ## Hardware
 
-  - MCU: ESP32 DevKit (or compatible)
+  - MCU: ESP32 DevKit 1 30 pin version.
   - Inputs: GPIO pins defined in Config.h
   - CAN Bus: transceiver (pins 15 RX, 2 TX)
-  - Optional: Direct USB connection via #define USEGCSERIAL (not setup without altering the config.h file.)
-
+  
 Pin Configuration (Current)
 
   - #define NUM_IO   16
