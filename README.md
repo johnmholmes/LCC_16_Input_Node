@@ -62,7 +62,7 @@ Factory reset support (Not supported at this stage)
 Pin Configuration (Current)
 
   - #define NUM_IO   16
-  - #define IOPINS   14,27,26,32,15,4,16,23,22,21,17,5,18,19,33,25
+  - #define IOPINS   4,16,17,5,18,19,21,22,13,12,14,27,26,25,33,32
 
 ## How It Works
 
